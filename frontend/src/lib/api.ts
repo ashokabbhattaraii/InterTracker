@@ -1,4 +1,7 @@
-const BASE = "/api";
+// Backend origin, set per environment. In Vercel set
+// NEXT_PUBLIC_API_URL=https://your-backend.vercel.app (no trailing slash).
+const API_ORIGIN = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:6001";
+const BASE = `${API_ORIGIN}/api`;
 
 export async function fetchApi<T>(path: string): Promise<T> {
   const res = await fetch(`${BASE}${path}`);

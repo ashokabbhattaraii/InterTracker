@@ -15,7 +15,10 @@
       "Bash(git commit -q -m ' *)",
       "Bash(git push *)",
       "Bash(npx prisma *)",
-      "Bash(npm run *)"
+      "Bash(npm run *)",
+      "WebSearch",
+      "Bash(echo \"exit=$? \\(non-zero = not ignored = good\\)\")",
+      "Bash(echo \"ignored-count exit=$? \\(1 = none ignored = good\\)\")"
     ]
   }
 }
