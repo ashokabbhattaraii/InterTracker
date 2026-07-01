@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node -e \"let s='';process.stdin.on\\('data',d=>s+=d\\).on\\('end',\\(\\)=>{const j=JSON.parse\\(s\\);console.log\\('created',j.created,'updated',j.updated,'skipped',j.skipped\\)}\\)\")",
+      "Bash(curl -s -X POST -H 'Content-Type: application/json' -d '{\"internId\":\"__TRACKED_VAR__\",\"date\":\"2026-06-02\",\"status\":\"CL\"}' http://localhost:6001/api/attendance)",
+      "Bash(node -e \"let s='';process.stdin.on\\('data',d=>s+=d\\).on\\('end',\\(\\)=>{const j=JSON.parse\\(s\\);console.log\\('breakdown',j.breakdown\\);console.log\\('compLeave',j.compLeave\\);console.log\\('flags',j.flags\\)}\\)\")",
+      "Bash(npx tsc *)",
+      "Bash(echo \"exit: $?\")",
+      "Bash(ssh -T git@github.com)",
+      "Read(//Users/ashokbhattarai/.ssh/**)",
+      "Bash(rm -rf frontend/.git)",
+      "Bash(git add *)",
+      "Bash(git check-ignore *)",
+      "Bash(git reset *)"
+    ]
+  }
+}
